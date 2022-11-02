@@ -49,19 +49,28 @@ public class SplitStack {
 
     public static void main(String args[]){
         Stack<Integer> s = new Stack<Integer>();
-        s.push(new Integer(5));
-        s.push(new Integer(-5));
-        s.push(new Integer(67));
-        s.push(new Integer(-45));
-        s.push(new Integer(67));
-        s.push(new Integer(9));
-        s.push(new Integer(0));
-        s.push(new Integer(-42));
-        s.push(new Integer(56));
-        s.push(new Integer(-7));
+        s.push(5); //Integer(int) is deprecated so please rewrite the belows
+        // like this s.push(5)  or s.push(Integer.valueOf(5));
+        // as I am providing an example below.
+        s.push(Integer.valueOf(5)); //this is an example.
+
+
+        s.push(new Integer(-5)); //revise rest as above.
+        s.push(new Integer(67));//revise rest as above.
+        s.push(new Integer(-45));//revise rest as above.
+        s.push(new Integer(67));//revise rest as above.
+        s.push(new Integer(9));//revise rest as above.
+        s.push(new Integer(0));//revise rest as above.
+        s.push(new Integer(-42));//revise rest as above.
+        s.push(new Integer(56));//revise rest as above.
+        s.push(new Integer(-7));//revise rest as above.
         System.out.println(s);
         modify(s);
-        System.out.println(s);
+        System.out.println(s); //also output must have negative on the left
+        // and positive on the right side.  Lower stack means you will need
+        // to display the negative number on your left. Please revise your
+        // program accordingly.
+
     }
 }
 
