@@ -26,13 +26,13 @@ public class SplitStack {
             while(s.size() != 0){
                 Integer temp = s.pop();
                 t.add(temp);
-                if(temp.intValue() >= 0){
-                    count++;
+                if(temp.intValue() < 0){
+                    count++;  // count non neg ints
                 }
             }
             while(t.size() != 0){
                 Integer temp = t.remove();
-                if(temp.intValue() < 0){
+                if(temp.intValue() >= 0){
                     if(s.size() >= count){
                         s.push(temp);
                     }
